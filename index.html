@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="search-wrap">
+            <input type="text" id="cityInput" placeholder="Search city…" />
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="loader"></div>
+            <p>Loading…</p>
+        </div>
+
+        <div id="error" class="error hidden">
+            <i class="fa-regular fa-circle-exclamation"></i>
+            <p>City not found</p>
+        </div>
+
+        <div class="weather hidden" id="weather">
+
+            <div class="main">
+                <img id="weatherIcon" src="" alt="" />
+                <div class="temp" id="temperature">--<sup>°C</sup></div>
+                <div class="desc" id="weatherType">--</div>
+                <div class="place" id="cityName">--</div>
+                <div class="coords">
+                    <span>
+                        <i class="fa-solid fa-arrow-up"></i> 
+                        <span class="label">Lat</span> 
+                        <span id="latitude">--</span>°
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i> 
+                        <span class="label">Lon</span> 
+                        <span id="longitude">--</span>°
+                    </span>
+                </div>
+                <div class="date-info" id="currentDate">--</div>
+            </div>
+
+            <div class="details">
+                <div class="detail">
+                    <div class="label">Feels Like</div>
+                    <div class="value" id="feelsLike">--°C</div>
+                </div>
+                <div class="detail">
+                    <div class="label">Humidity</div>
+                    <div class="value" id="humidity">--%</div>
+                </div>
+                <div class="detail">
+                    <div class="label">Wind</div>
+                    <div class="value" id="wind">-- m/s</div>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <h4>5-Day Forecast</h4>
+                <div class="forecast-grid" id="forecastContainer"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
